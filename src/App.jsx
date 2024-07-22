@@ -1,13 +1,8 @@
-import { useState } from "react";
+import Dashboard from "./components/backgroundColorChanger/Dashboard";
 
 function App() {
-    const [counter, setCounter] = useState(0);
 
-    return (
-        <>
-        <p className="text-center text-3xl mt-auto">h1llo</p>
-        </>
-    );
+    return <Dashboard />;
 }
 
 export default App;
