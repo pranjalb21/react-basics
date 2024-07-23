@@ -1,8 +1,12 @@
-import Dashboard from "./components/backgroundColorChanger/Dashboard";
+import BackgroundColorChanger from "./components/backgroundColorChanger/BackgroundColorChanger";
+import PasswordGenerator from "./components/passwordGenerator/PasswordGenerator";
 
 function App() {
-
-    return <Dashboard />;
+    return(
+    <>
+        {/* <BackgroundColorChanger /> */}
+        <PasswordGenerator />
+    </>)
 }
 
 export default App;

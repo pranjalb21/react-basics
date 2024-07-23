@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ColorTag from "./ColorTag";
 
-function Dashboard() {
+function BackgroundColorChanger() {
     const [color, setColor] = useState("white");
     const colors = [
         { bgColor: "#FF0000", textColor: "white", btnText: "Red" },
@@ -11,6 +11,8 @@ function Dashboard() {
         { bgColor: "#000000", textColor: "white", btnText: "Black" },
         { bgColor: "#808080", textColor: "white", btnText: "Grey" },
         { bgColor: "#E6E6FA", textColor: "black", btnText: "Lavender" },
+        { bgColor: "olive", textColor: "white", btnText: "Olive" },
+        { bgColor: "purple", textColor: "white", btnText: "Purple" }
     ];
     return (
         <div className="w-full h-screen" style={{ backgroundColor: color }}>
@@ -31,4 +33,4 @@ function Dashboard() {
     );
 }
 
-export default Dashboard;
+export default BackgroundColorChanger;
