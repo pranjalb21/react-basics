@@ -51,7 +51,7 @@ function PasswordGenerator() {
                     />
                     <button
                         onClick={copyIntoClipboard}
-                        className="bg-green-600 hover:bg-green-700 text-yellow-50 shrink-0 py-0.5 px-2 font-bold"
+                        className="bg-green-600 active:scale-y-105 hover:bg-green-700 text-yellow-50 shrink-0 py-0.5 px-2 font-bold"
                     >
                         Copy
                     </button>
@@ -104,6 +104,14 @@ function PasswordGenerator() {
                         </div>
                     </div>
                 </div>
+                <button
+                    onClick={passwordGenerate}
+                    className="bg-emerald-600 hover:bg-emerald-700 
+                    active:translate-y-0.5 px-1 py-2 mt-2 rounded-lg 
+                    shadow-lg font-bold text-yellow-50"
+                >
+                    Generate new
+                </button>
             </div>
         </div>
     );
