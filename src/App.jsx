@@ -13,42 +13,43 @@ import Login from "./components/reactRouter/Login";
 import ThemeBody from "./components/themeChanger/ThemeBody";
 import useTheme, { ThemeProvider } from "./components/themeChanger/useTheme";
 import { useEffect, useState } from "react";
+import Todo from "./components/todo/Todo";
 
 function App() {
-    const router = createBrowserRouter([
-        {
-            path: "/",
-            element: <Page />,
-            children: [
-                {
-                    path: "",
-                    element: <Body />,
-                },
-                {
-                    path: "about",
-                    element: <About />,
-                },
-                {
-                    path: "contact",
-                    element: <Contact />,
-                },
-                {
-                    path: "github",
-                    element: <Github />,
-                },
-                {
-                    path: "login",
-                    element: <Login />,
-                },
-            ],
-        },
-    ]);
-    const [theme, setTheme] = useState(false);
-    useEffect(() => {
-        let html = document.querySelector("html");
-        html.classList.remove("light", "dark");
-        html.classList.add(`${theme ? "dark" : "light"}`);
-    }, [theme]);
+    // const router = createBrowserRouter([
+    //     {
+    //         path: "/",
+    //         element: <Page />,
+    //         children: [
+    //             {
+    //                 path: "",
+    //                 element: <Body />,
+    //             },
+    //             {
+    //                 path: "about",
+    //                 element: <About />,
+    //             },
+    //             {
+    //                 path: "contact",
+    //                 element: <Contact />,
+    //             },
+    //             {
+    //                 path: "github",
+    //                 element: <Github />,
+    //             },
+    //             {
+    //                 path: "login",
+    //                 element: <Login />,
+    //             },
+    //         ],
+    //     },
+    // ]);
+    // const [theme, setTheme] = useState(false);
+    // useEffect(() => {
+    //     let html = document.querySelector("html");
+    //     html.classList.remove("light", "dark");
+    //     html.classList.add(`${theme ? "dark" : "light"}`);
+    // }, [theme]);
 
     return (
         <>
@@ -58,10 +59,11 @@ function App() {
                 <PasswordGenerator />
                 <CurrencyConverter />
                 <HomePage />
-            */}
             <ThemeProvider value={{ theme, setTheme }}>
                 <ThemeBody />
             </ThemeProvider>
+            */}
+            <Todo />
         </>
     );
 }
