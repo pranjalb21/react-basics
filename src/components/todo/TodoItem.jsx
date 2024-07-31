@@ -11,7 +11,7 @@ export default function TodoItem({ todo }) {
 
     return (
         <div
-            className={` w-1/2 px-4 py-2 rounded-md flex justify-evenly gap-2 ${
+            className={` w-1/2 px-4 py-2 shadow-md rounded-md flex justify-evenly gap-2 ${
                 isComplete ? " bg-lime-300 opacity-60" : "bg-gray-100"
             }`}
             id={todo.id}

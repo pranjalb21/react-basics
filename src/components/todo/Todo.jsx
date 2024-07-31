@@ -39,7 +39,7 @@ export default function Todo() {
         <TodoContextProvider
             value={{ todosList, addTodo, updateTodo, deleteTodo }}
         >
-            <div className="w-full h-screen bg-purple-200 flex flex-col items-center p-10 gap-2">
+            <div className="w-full h-screen bg-slate-500 flex flex-col items-center p-10 gap-2">
                 <TodoInput />
                 {todosList.map((todo) => (
                     <TodoItem key={todo.id} todo={todo} />
